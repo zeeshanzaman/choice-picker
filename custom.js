@@ -44,7 +44,12 @@ function pickRandomTag() {
     return tags[Math.floor(Math.random() * tags.length)]
 }
 
-// add heightlight class
-function heightlightTag(tag) {
+// add highlight class
+function highlightTag(tag) {
     tag.classList.add('highlight')
+}
+
+// remove highlight class
+function unHighlightTag(tag) {
+    tag.classList.remove('highlight')
 }
