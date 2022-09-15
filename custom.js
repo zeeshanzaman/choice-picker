@@ -37,3 +37,11 @@ function randomSelect() {
         const randomTag = pickRandomTag()
     }, 100);
 }
+
+// this function will work on floor value math random 
+function pickRandomTag() {
+    const tags = document.querySelectorAll('.tag')
+    return tags[Math.floor(Math.random() * tags.length)]
+}
+
+// add heightlight class
