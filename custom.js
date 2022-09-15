@@ -29,3 +29,11 @@ function createTags(input) {
     })
 
 }
+// it is for how many times will blink after that select random one 
+function randomSelect() {
+    const times = 30
+
+    const interval = setInterval(() => {
+        const randomTag = pickRandomTag()
+    }, 100);
+}
