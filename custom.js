@@ -45,3 +45,6 @@ function pickRandomTag() {
 }
 
 // add heightlight class
+function heightlightTag(tag) {
+    tag.classList.add('highlight')
+}
