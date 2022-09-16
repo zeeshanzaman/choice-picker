@@ -45,6 +45,6 @@ textarea {
     display: inline-block;
 }
 
-.tag .heightlight {
+.tag.highlight {
     background-color: #273c75;
 }
