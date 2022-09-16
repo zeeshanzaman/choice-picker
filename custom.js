@@ -10,14 +10,12 @@ textarea.addEventListener('keyup', (e) => {
         setTimeout(() => {
             e.target.value = ''
         }, 10)
-
         randomSelect()
     }
 })
 
 function createTags(input) {
-    const tags = input.split(',').filter(tag => tag.trim() !==
-        '').map(tag => tag.trim())
+    const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
 
     tagsEl.innerHTML = ''
 
@@ -29,7 +27,8 @@ function createTags(input) {
     })
 
 }
-// it is for how many times will blink after that select random one 
+
+
 function randomSelect() {
     const times = 30
 
@@ -48,27 +47,25 @@ function randomSelect() {
 
         setTimeout(() => {
             const randomTag = pickRandomTag()
-
             highlightTag(randomTag)
-        })
+        }, 100)
 
     }, times * 100)
-
-
 }
 
-// this function will work on floor value math random 
+// tags array with math floor
 function pickRandomTag() {
     const tags = document.querySelectorAll('.tag')
     return tags[Math.floor(Math.random() * tags.length)]
 }
 
-// add highlight class
+
+// add highlight tags
 function highlightTag(tag) {
     tag.classList.add('highlight')
 }
 
-// remove highlight class
+//remove highlight tags
 function unHighlightTag(tag) {
     tag.classList.remove('highlight')
 }
